@@ -1,6 +1,6 @@
 # Policy and Compliance Management Architecture
 
-This diagram illustrates the policy and compliance management workflow for the project, which is deployed on AWS using several services like API Gateway, Lambda, S3, SQS, DynamoDB, and SNS.
+This diagram illustrates the policy and compliance management workflow for the project, which is deployed on AWS using several services like API Gateway, Lambda, S3, DynamoDB, and SNS.
 
 ![Policy and Compliance Management Diagram](./images/Untitled%20Diagram.drawio.png)
 
@@ -11,7 +11,6 @@ This diagram illustrates the policy and compliance management workflow for the p
 
 2. **Policy Management Flow**: 
    - API Gateway routes the policy upload request to **SQS (Simple Queue Service)**.
-   - **SQS** queues the request and triggers a **Lambda function** for managing policies.
    - The **Lambda function**:
      - Uploads the policy document to **S3** for storage.
      - Stores metadata (policyId, filePath, timestamp) in **DynamoDB**.
