@@ -18,7 +18,7 @@ This diagram illustrates the policy and compliance management workflow for the p
    - If necessary, **DynamoDB Streams** can trigger further actions.
 
 3. **Compliance Management Flow**: 
-   - The API Gateway directly routes the request to the **Compliance Lambda** without involving SQS.
+   - The API Gateway directly routes the request to the **Compliance Lambda** .
    - The **Lambda function** fetches compliance-related data from **DynamoDB** and updates compliance metrics if needed.
 
 4. **Storage and Notifications**:
