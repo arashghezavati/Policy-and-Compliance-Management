@@ -10,7 +10,7 @@ This diagram illustrates the policy and compliance management workflow for the p
    - Users interact with the system through **API Gateway**. They can either upload a policy or fetch compliance data.
 
 2. **Policy Management Flow**: 
-   - API Gateway routes the policy upload request to **SQS (Simple Queue Service)**.
+   - API Gateway routes the policy upload.
    - The **Lambda function**:
      - Uploads the policy document to **S3** for storage.
      - Stores metadata (policyId, filePath, timestamp) in **DynamoDB**.
